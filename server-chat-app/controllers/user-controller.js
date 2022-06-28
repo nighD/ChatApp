@@ -28,7 +28,6 @@ const createUser = async (req, res) => {
 };
 
 const checkUserExist = async (req, res) => {
-  console.log(req.body.data)
   const isUserExist = await User.find({
     "username": req.body.data.username,
     "room": req.body.data.room

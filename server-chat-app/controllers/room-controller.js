@@ -1,7 +1,6 @@
 const Room = require("../models/room-model");
 
 const getMessage = (req, res) => {
-  console.log(req.body)
     Room.find({ name : req.body.data.name}, {},(err, room) => {
     if (err) {
       res.send(err);
@@ -11,7 +10,6 @@ const getMessage = (req, res) => {
 };
 
 const createMessage = async (req, res) => {
-  console.log(req.body)
   const room = new Room({
     name: req.body.name,
     text: req.body.text,

@@ -1,0 +1,1 @@
+To run the application, cd into each folder then "npm start"
